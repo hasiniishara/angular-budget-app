@@ -1,59 +1,45 @@
-# AngularBudgetApp
+# Angular Budget App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.3.
+## Introduction
 
-## Development server
+In this project, you'll create a budgeting application using Angular. This app will help users manage their incomes and expenses, track their balance, and save money by setting saving targets.
 
-To start a local development server, run:
+## Description
 
-```bash
-ng serve
-```
+In the Budget App, users will be able to:
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+1. Record both incomes and expenses.
+2. Check their balance.
+3. Manage the saving:
+   - Set a targeted saving amount.
+   - Transfer money into or out of the saving account.
+   - View their progress towards reaching the saving target.
 
-## Code scaffolding
+## Guidelines
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+1. Creating components:
 
-```bash
-ng generate component component-name
-```
+- Use the Angular CLI to generate the main components for the app:
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+  ```
+  ng generate component transaction
+  ng generate component balance
+  ng generate component saving
+  ```
 
-```bash
-ng generate --help
-```
+2. `TransactionComponent`: This component can be reused for both Income and Expense entries.
 
-## Building
+3. `BalanceComponent`: Displays the current balance and provides options to transfer money to the saving account.
 
-To build the project run:
+4. `SavingsComponent`: Allows setting a saving target and displays a progress bar.
 
-```bash
-ng build
-```
+## How do I ask for help or a review?
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+You should follow this GitHub workflow:
 
-## Running unit tests
+1. Think of it as an open-source project
+2. Fork the repository
+3. Open a PR from your origin (forked repo) against this repository
+4. Leave a comment and tag me
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+`If you have any further questions. Post your question in PathWright Community tab.`
