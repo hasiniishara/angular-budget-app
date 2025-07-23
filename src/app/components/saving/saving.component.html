@@ -1,0 +1,21 @@
+<h2>Saving Goals</h2>
+
+<input
+  type="number"
+  [(ngModel)]="savingTarget"
+  placeholder="Set saving target"
+/>
+<button (click)="setTarget()">Set Target</button>
+
+<p>Saved: ${{ budgetService.savings }} / ${{ budgetService.savingTarget }}</p>
+
+<div style="background: #eee; height: 20px; width: 100%; margin-top: 10px;">
+  <div
+    style="background: green; height: 100%;"
+    [style.width.%]="budgetService.getSavingsProgress()"
+  ></div>
+</div>
+
+<br />
+<button (click)="goToBalance()" class="nav-button">Go to Balance</button>
+<button (click)="goToTransaction()" class="nav-button">Go to Transactions</button>

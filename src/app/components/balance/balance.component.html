@@ -1,0 +1,12 @@
+<h2>Balance</h2>
+<p>Current Balance: ${{ budgetService.balance }}</p>
+<p>Savings: ${{ budgetService.savings }}</p>
+
+<input type="number" [(ngModel)]="transferAmount" placeholder="Amount" />
+<button (click)="transferToSavings()">Transfer to Savings</button>
+<button (click)="transferFromSavings()">Transfer from Savings</button>
+
+<div style="margin-top: 20px;">
+  <button (click)="goToSavings()" class="nav-button">Go to Savings</button>
+  <button (click)="goToTransaction()" class="nav-button">Go to Transaction</button>
+</div>

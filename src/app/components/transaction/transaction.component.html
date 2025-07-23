@@ -1,0 +1,27 @@
+<h2>Transactions</h2>
+
+<form (ngSubmit)="addTransaction()">
+  <input
+    type="number"
+    [(ngModel)]="amount"
+    name="amount"
+    required
+    placeholder="Amount"
+  />
+  <select [(ngModel)]="type" name="type">
+    <option value="income">Income</option>
+    <option value="expense">Expense</option>
+  </select>
+  <button type="submit">Add</button>
+</form>
+
+<ul>
+  <li *ngFor="let t of budgetService.transactions">
+    {{ t.type }}: ${{ t.amount }}
+  </li>
+</ul>
+
+<div style="margin-top: 20px;">
+  <button (click)="goToBalance()" class="nav-button">Go to Balance</button>
+  <button (click)="goToSavings()" class="nav-button">Go to Savings</button>
+</div>
